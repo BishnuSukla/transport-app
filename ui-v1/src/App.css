@@ -1,0 +1,11 @@
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App{
+  width: 400px;
+  height: 100vh;
+  background-color: rgb(241 241 247);
+  color:black;
+}

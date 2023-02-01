@@ -1,0 +1,50 @@
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:30px;
+    background-color: rgb(150, 168, 248);
+    padding: 10px;
+
+    &__nav{
+        position: relative;
+        a{
+            cursor: pointer;
+            margin-left: 20px;
+            padding: 7px;
+            font-size:14px;
+            border-radius: 50%;
+        }
+        a:hover{
+            background-color: rgb(255, 255, 255);
+            color:rgb(150, 168, 248);
+        }
+        &__language-dropdown{
+            position:absolute;
+            width:100px;
+            right:45%;
+            top:65%;
+            padding: 0;
+
+            ul{
+                list-style: none;
+                padding: 0;
+                li{
+                    cursor: pointer;
+                    background-color: rgb(255, 255, 255);
+                    padding: 5px;
+                    color:rgb(150, 168, 248);
+                    border-bottom: 1px solid rgb(150, 168, 248);
+                }
+                li:hover{
+                    color:rgb(255, 255, 255);
+                    background-color: rgb(137 148 240);
+                }
+            }
+        }
+    }
+}
+.active-nav{
+    background-color: rgb(255, 255, 255);
+    color:rgb(150, 168, 248);
+}
