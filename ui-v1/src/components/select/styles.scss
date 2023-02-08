@@ -1,0 +1,30 @@
+.select-dropdown{
+    position:absolute;
+    right:5px;
+    width:100px;
+    padding: 0;
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            cursor: pointer;
+            background-color: rgb(255, 255, 255);
+            padding: 5px;
+            color:rgb(150, 168, 248);
+            border-bottom: 1px solid rgb(150, 168, 248);
+        }
+        li:hover{
+            color:rgb(255, 255, 255);
+            background-color: rgb(137 148 240);
+        }
+    }
+}
+.select-dropdown::before{
+    content:'';
+    position:absolute;
+    right:0;
+    top:6px;
+    border-bottom:8px solid rgb(255, 255, 255);
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+}
