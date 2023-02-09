@@ -1,17 +1,16 @@
+@import '../../styles/main.scss';
 .header-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height:30px;
+    @include flex-justify(space-between);
+    height:$px30;
     background-color: rgb(150, 168, 248);
-    padding: 10px;
+    padding: $px10;
 
     &__nav{
         a{
             cursor: pointer;
-            margin-left: 20px;
-            padding: 7px;
-            font-size:14px;
+            margin-left: $px20;
+            padding: $px7;
+            font-size:$text-sm;
             border-radius: 50%;
         }
         a:hover{

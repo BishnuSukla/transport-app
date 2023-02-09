@@ -1,0 +1,250 @@
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-justify($dir: left) {
+	display: flex;
+	justify-content: $dir;
+	align-items: center;
+}
+
+@mixin flex-align($dir: left) {
+	display: flex;
+	align-items: $dir;
+}
+
+@mixin flex-flow($dir: column) {
+	display: flex;
+	flex-flow: $dir;
+}
+
+@mixin flex-direction($dir: row) {
+	display: flex;
+	flex-direction: $dir;
+}
+
+@mixin flex-direction-align($dir: row, $align: center) {
+	display: flex;
+	flex-direction: $dir;
+	align-items: $align;
+}
+
+@mixin overflow-hidden {
+	overflow: hidden;
+}
+
+@mixin overflow {
+	overflow: auto;
+}
+
+@mixin border($color: $gray-1, $width: $px1, $type: solid) {
+	border: $width $type $color;
+}
+
+@mixin border-bottom($color: $gray-1, $width: $px1, $type: solid) {
+	border-bottom: $width $type $color;
+}
+
+@mixin section-container-bg {
+	background: $white;
+	border-radius: $px8;
+	padding: $px16;
+	box-sizing: border-box;
+}
+
+@mixin align-center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+@mixin section-shadow-bottom {
+	-webkit-box-shadow: $section-shadow-only-bottom;
+	-moz-box-shadow: $section-shadow-only-bottom;
+	box-shadow: $section-shadow-only-bottom;
+}
+@mixin for-phone-only {
+	@media (max-width: 599px) {
+		@content;
+	}
+}
+
+@mixin for-tablet-portrait-up {
+	@media (min-width: 600px) {
+		@content;
+	}
+}
+
+@mixin for-tablet-landscape-up {
+	@media (min-width: 900px) {
+		@content;
+	}
+}
+
+@mixin for-desktop-up {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin for-big-desktop-up {
+	@media (min-width: 1800px) {
+		@content;
+	}
+}
+
+//text mixins
+@mixin base-text {
+	letter-spacing: -0.02em;
+	font-style: normal;
+}
+
+@mixin simpl-font-2xs($weight: 400) {
+	@include base-text;
+	line-height: $px13; //13px;
+	font-size: $text-2xs; //10px
+	font-weight: $weight;
+}
+
+@mixin simpl-font-xs($weight: 400) {
+	@include base-text;
+	line-height: $px15; //15px;
+	font-size: $text-xs; //12px
+	font-weight: $weight;
+}
+
+@mixin simpl-font-sm($weight: 400) {
+	@include base-text;
+	line-height: $px18; //18px;
+	font-size: $text-sm; //14px
+	font-weight: $weight;
+}
+
+@mixin simpl-font-base($weight: 400) {
+	@include base-text;
+	line-height: $px20; // 20px;
+	font-size: $text-base; //16px
+	font-weight: $weight;
+}
+
+@mixin simpl-font-lg($weight: 400) {
+	@include base-text;
+	line-height: $px24; // 24px;
+	font-size: $text-lg; //18px
+	font-weight: $weight;
+}
+
+@mixin simpl-font-xl($weight: 400) {
+	@include base-text;
+	line-height: $px24; //24px;
+	font-size: $text-xl; //20px
+	font-weight: $weight;
+}
+
+@mixin simpl-font-2xl($weight: 400) {
+	@include base-text;
+	line-height: $px28; //28px;
+	font-size: $text-2xl; //22px
+	font-weight: $weight;
+}
+
+@mixin cursor-pointer($type: pointer) {
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+}
+
+@mixin icon($url, $height, $width) {
+	height: $height;
+	width: $width;
+	background-image: url($url);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+@mixin placeholder($color, $size: '') {
+	&::-webkit-input-placeholder {
+		color: $color;
+		@if $size != '' {
+			font-size: $size;
+		}
+	}
+	&:-moz-placeholder {
+		color: $color;
+		@if $size != '' {
+			font-size: $size;
+		}
+	}
+	&::-moz-placeholder {
+		color: $color;
+		@if $size != '' {
+			font-size: $size;
+		}
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+		@if $size != '' {
+			font-size: $size;
+		}
+	}
+}
+
+@mixin full-height {
+	height: 100%;
+}
+
+@mixin full-width {
+	width: 100%;
+}
+
+@mixin auto-width {
+	width: auto;
+}
+
+@mixin inset-0 {
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+
+@mixin text-input($width, $margin: 0) {
+	@include simpl-font-xs();
+	border: none;
+	width: $width;
+	color: $gray-1;
+	margin: $margin;
+	padding: $px12 $px16;
+	background-color: $gray-6;
+	border-radius: $px3;
+	letter-spacing: 0.6px;
+	@include placeholder($gray-4, $px12);
+	&:focus {
+		outline: none;
+	}
+}
+
+@mixin collapse-header {
+	background-color: $white;
+	color: $gray-1;
+	@include flex-center();
+	width: 100%;
+	border: none;
+	margin: 0;
+	padding: $px8 $px8;
+}
+
+@mixin outage-warning {
+	@include flex-align(flex-start);
+	color: $accent-red;
+	line-height: $px13;
+	font-size: $text-2xs;
+	background: $accent-red-bg;
+	@include border($accent-red);
+	border-radius: $px3;
+	padding: $px5;
+	&__icon {
+		margin-right: $px5;
+	}
+}

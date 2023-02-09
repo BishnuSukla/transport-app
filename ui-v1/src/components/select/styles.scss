@@ -1,7 +1,8 @@
+@import '../../styles/main.scss';
 .select-dropdown{
     position:absolute;
-    right:5px;
-    width:100px;
+    right:$px5;
+    width:$px100;
     padding: 0;
     ul{
         list-style: none;
@@ -9,9 +10,9 @@
         li{
             cursor: pointer;
             background-color: rgb(255, 255, 255);
-            padding: 5px;
+            padding: $px5;
             color:rgb(150, 168, 248);
-            border-bottom: 1px solid rgb(150, 168, 248);
+            border-bottom: $px1 solid rgb(150, 168, 248);
         }
         li:hover{
             color:rgb(255, 255, 255);
@@ -23,8 +24,8 @@
     content:'';
     position:absolute;
     right:0;
-    top:6px;
-    border-bottom:8px solid rgb(255, 255, 255);
-    border-left:8px solid transparent;
-    border-right:8px solid transparent;
+    top:$px6;
+    border-bottom:$px8 solid rgb(255, 255, 255);
+    border-left:$px8 solid transparent;
+    border-right:$px8 solid transparent;
 }
