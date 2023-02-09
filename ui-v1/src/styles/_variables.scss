@@ -1,0 +1,86 @@
+//colors
+$primary: rgb(150, 168, 248);
+
+//z-index
+$z-2: 2;
+$z-3: 3;
+$z-4: 4;
+$z-10: 10;
+$z-20: 20;
+$z-30: 30;
+$z-40: 40;
+$z-50: 50;
+
+// Font Weight
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extrabold: 800;
+
+//px in rem
+$px1: 0.063rem;
+$px2: 0.125rem;
+$px3: 0.1875rem;
+$px5: 0.313rem;
+$px4: 0.25rem;
+$px6: 0.375rem;
+$px7: 0.4375rem;
+$px8: 8px;
+$px9: 9px;
+$px10: 10px;
+$px11: 11px;
+$px12: 12px;
+$px13: 13px;
+$px14: 14px;
+$px15: 15px;
+$px16: 16px;
+$px18: 18px;
+$px20: 20px;
+$px22: 22px;
+$px24: 24px;
+$px28: 1.75rem;
+$px30: 1.875rem;
+$px32: 2rem;
+$px36: 2.25rem;
+$px38: 2.375rem;
+$px40: 2.5rem;
+$px44: 2.75rem;
+$px48: 3rem;
+$px50: 3.125rem;
+$px56: 3.5rem;
+$px60: 3.75rem;
+$px64: 4rem;
+$px68: 4.25rem;
+$px72: 4.5rem;
+$px75: 4.6875rem;
+$px80: 5rem;
+$px84: 5.25rem;
+$px100: 6.25rem;
+$px120: 7.5rem;
+$px132: 8.25rem;
+$px146: 9.125rem;
+$px160: 10rem;
+$px184: 11.5rem;
+$px200: 12.5rem;
+$px300: 18.75rem;
+$px350: 21.875rem;
+$px375: 23.438rem;
+$px450: 28.125rem;
+$px480: 30rem;
+
+// Font Size
+$text-2xs: $px10; //10px
+$text-xs: $px12; //12px
+$text-sm: $px14; //14px
+$text-2sm: $px15; //15px
+$text-base: $px16; //16px
+$text-lg: $px18; //18px
+$text-xl: $px20; //20px
+$text-2xl: $px22; //22px
+$text-3xl: $px24; //24px
+$text-4xl: $px30; //30px
+$text-4xl: $px32; //32px
+
+$linear-gradient-1: linear-gradient(90deg, #e0faff 0%, #e5ffe9 100%);
+$linear-gradient-2: linear-gradient(270deg, #f5515f 0%, #ff6a62 100%);
